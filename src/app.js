@@ -10,7 +10,6 @@ app.use(express.static(path.join(__dirname, '../public')))
 app.get('', (req, res) => {
     //res.render('index')
     stats((data) => {
-        console.log(data)
         res.render('index', {
             cTotal: data.confirmed.total,
             cDate: data.confirmed.date,
